@@ -1,6 +1,9 @@
 .lover_part{
     display: flex;
-    gap:162px;
+    gap: 165px;
+    flex-wrap: nowrap;
+    
+    
 }
 .footer_contact{
     font-size: 40px;
@@ -14,6 +17,7 @@
     font-family: Montserrat;
     font-weight: 600;
     line-height: 130%;
+    min-width: 650px;
 }
 .footer_icons_join{
     padding-top: 30px;
@@ -40,6 +44,9 @@
 .footer_icons img{
     width: 50px;
     height: 50px;
+}
+.footer_right_el{
+    min-width: 50px;
 }
 .footer_right_el a{
     text-decoration: none;

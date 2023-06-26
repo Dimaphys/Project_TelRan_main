@@ -10,16 +10,16 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div>
-      <NavMenu/>
-       {/* <Routes>
+    
+      <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<ProductsPage />} />
+          {/* <Route index element={<ProductsPage />} />
           <Route path='/product/:id' element={<ProductDescriptionPage />} />
           <Route path='/cart' element={<CartPage />} />
-          <Route path='/categories/:category'/>
+          <Route path='/categories/:category'/> */}
         </Route>
-      </Routes> */}
-      <Footer/>
+      </Routes> 
+     
     </div>
   );
 }
