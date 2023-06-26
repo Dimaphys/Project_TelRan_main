@@ -1,0 +1,56 @@
+.header{
+    background-color: white;
+    margin: 20px;
+   
+}
+.nav{
+    height: 72px;
+}
+.container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.catalog{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #339933;
+    color: white;
+    width: 125px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 700;
+    cursor: pointer;
+    
+
+}
+.links{
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo{
+    display:flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo img{
+    height: 72px;
+    width: 72px;
+}
+.cartImg{
+    cursor: pointer;
+    padding-left: 100px;
+}
