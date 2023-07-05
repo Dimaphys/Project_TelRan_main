@@ -1,6 +1,9 @@
-import Footer from '../Footer';
+import AllProductsPage from '../../pages/AllProductsPage';
+import AllSalesPage from '../../pages/AllSalesPage';
+import CartPage from '../../pages/CartPage';
+import CategoryPage from '../../pages/CategoryPage';
+import MainPage from '../../pages/MainPage';
 import Layout from '../Layout';
-import NavMenu from '../NavMenu';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
@@ -10,13 +13,12 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div>
-    
       <Routes>
         <Route path='/' element={<Layout />}>
-          {/* <Route index element={<ProductsPage />} />
-          <Route path='/product/:id' element={<ProductDescriptionPage />} />
-          <Route path='/cart' element={<CartPage />} />
-          <Route path='/categories/:category'/> */}
+          <Route index element={<MainPage />} />
+          <Route path='/products' element={<AllProductsPage />} />
+          <Route path='/sales' element={<AllSalesPage />} />
+          <Route path='/cart' element={<CartPage />} /> 
         </Route>
       </Routes> 
      
