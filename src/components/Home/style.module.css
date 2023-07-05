@@ -1,0 +1,51 @@
+.sales_container{
+    background-color: #A1E2EB;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    gap: 310px;
+}
+.sales_container h2{
+    color: #FFF;
+    font-size: 80px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    
+}
+.sales_container h3{
+    color: #FFF;
+    font-size: 63px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+.sale_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    width: 155px;
+    height: 80px;
+    border-radius: 13px;
+    margin-top: 60px;
+    cursor: pointer;
+
+}
+.sale_button p{
+    color: #2D2D2D;
+    font-size: 25px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-decoration: none;
+}
+.home_catalod_container{
+    background-color: #FFF;
+    width: 620px;
+}

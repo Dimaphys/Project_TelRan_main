@@ -3,6 +3,7 @@ import s from "./style.module.css";
 import logo from "../../media/Logo1.png";
 import cart_img from "../../media/Cart.png";
 import Container from "../UI/Container";
+import { Link } from 'react-router-dom'
 
 //Создаем навигационное меню
 
@@ -15,14 +16,18 @@ export default function NavMenu() {
             <div>
               <img src={logo} alt="Logo" />
             </div>
+            <Link to="/categories">
             <div className={s.catalog}>Catalog</div>
+            </Link>
           </div>
           <div className={s.links}>
-            <a href="">Main Page</a>
-            <a href="">All Products</a>
-            <a href="">All sales</a>
+            <Link to="/">Main Page</Link>
+            <Link to="/products">All Products</Link>
+            <Link to="/sales">All sales</Link>
             <div className={s.cartImg}>
-              <img src={cart_img} alt="Cart img" />
+              <Link to="/cart">
+                <img src={cart_img} alt="Cart img" />
+              </Link>
             </div>
           </div>
         </Container>

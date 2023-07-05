@@ -9,8 +9,9 @@ export default function Layout() {
   return (
     <div>
       <NavMenu />
-      <Footer />
       <Outlet />
+      <Footer />
+      
     </div>
   );
 }
