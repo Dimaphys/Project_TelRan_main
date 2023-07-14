@@ -18,26 +18,31 @@ export const ProductItem = ({ id, title, description, price, discont_price, imag
 
   const img_link = [host_link,image].join("");
   const product_route = `/product/${id}`;
-  console.log(img_link);
-  const discont_value = (price - discont_price) / price * 100;
+  const discont_value = Math.round((price - discont_price) / price * 100);
   return (
     <div>
         
         <div className={s.card}>
               
-              <img src={img_link} alt={title}/>
+              <img src={img_link} alt={title} className={s.card_img}/>
               <p></p> 
-              <p>Title: {title}</p>
-              <p className={s.main_price}>
-                {discont_value !== 100 ?
-                discont_price : price}
-              </p>
-              <p className={s.discont_p}>
-              {discont_value !== 100 ?
-               price : 0}
-              </p>
-
-        
+                <div className={s.price_container}>
+                  <p className={s.main_price}>
+                    {discont_value !== 100 ?
+                    discont_price : price } $
+                  </p>
+                  <p className={s.discont_p}>
+                  {discont_value !== 100 ?
+                  price : ""}
+                  </p>
+                  <p className={s.discont_v}>
+                  {discont_value !== 100 ?
+                  "-"+discont_value+"%" : ""}
+                  </p>
+                </div>
+              <p className={s.products_title}>{title}</p>
+{/* добавить stop propagation */}
+      <button></button>
         </div>
     </div>
   );

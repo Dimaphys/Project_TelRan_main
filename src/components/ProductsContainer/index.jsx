@@ -3,25 +3,42 @@ import { ProductItem } from '../ProductItem';
 import s from './index.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../async_actions/products_req';
+import Container from '../UI/Container';
+import FilterForm from '../FilterForm';
 
 
-export const ProductsContainer = () => {
-  const store = useSelector((store) => store.products);
+
+export default function ProductsContainer() {
+
+
 
   const dispatch = useDispatch();
+
+ 
+
+  const products_state = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getProducts)
   }, []);
 
   return (
+    <Container className={s.container}>
     <div>
     <h2>All products</h2>
-    <div className={s.container}>
-      {store.map((item) => (
-        <ProductItem key={item.id} {...item} />
-      ))}
+      <div>
+       <FilterForm/>
+      <div className={s.products_container}>
+        {products_state
+        .filter(el => el.show_item)
+        .map((item) => (
+          <ProductItem key={item.id} {...item} />
+        ))}
+      </div>
     </div>
-    </div>
+
+   </div>
+   </Container>
   );
 };
+

@@ -3,6 +3,7 @@ import AllSalesPage from '../../pages/AllSalesPage';
 import CartPage from '../../pages/CartPage';
 import CategoryPage from '../../pages/CategoriesPage';
 import MainPage from '../../pages/MainPage';
+import NotFoundPage from '../../pages/NotFoundPage';
 import Layout from '../Layout';
 import Container from '../UI/Container';
 import './App.css';
@@ -10,9 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 
 
 
-// определяем локалхост
 
-export const host_link = "http://localhost:3333"
 
 function App() {
   
@@ -25,7 +24,8 @@ function App() {
             <Route path='/categories' element={<CategoryPage/>} />
             <Route path='/products' element={<AllProductsPage />} />
             <Route path='/sales' element={<AllSalesPage />} />
-            <Route path='/cart' element={<CartPage />} /> 
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='/*' element={<NotFoundPage />} /> 
           </Route>
         </Routes> 
       

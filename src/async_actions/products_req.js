@@ -5,8 +5,14 @@ import { loadProductsByCategory } from "../store/reducers/productsByCategoryRedu
 export const getProducts = (dispatch) => {
   fetch('http://localhost:3333/products/all')
     .then((res) => res.json())
-    .then((json) => dispatch(loadProducts(json)))
-};
+    .then((json) => {
+      const new_json = json.map(el => ({
+          ...el,
+          show_item:true
+      }));
+      dispatch(loadProducts(new_json))})
+  
+}
 
 export const getSingleProduct = (id) => {
   return dispatch => {
