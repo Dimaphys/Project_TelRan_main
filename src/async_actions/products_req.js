@@ -23,11 +23,12 @@ export const getSingleProduct = (id) => {
   }
 }
 
-export const getProductsByCategory = (category) => {
+
+export const getProductsByCategory = (id) => {
   return dispatch => {
-    fetch([Host(),`/categories/${category}`].join(""))
+    fetch([Host(),`/categories/${id}`].join(""))
       .then(res => res.json())
-      .then(json => dispatch(loadProductsByCategory(json.products)))
+      .then(json => dispatch(loadProductsByCategory(json)))
   }
 }
 // 

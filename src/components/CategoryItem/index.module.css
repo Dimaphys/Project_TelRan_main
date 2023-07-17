@@ -2,17 +2,22 @@
   border: 1px solid black;
   width: 300px;
 }
-
-.category_item a {
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  text-align: center;
-}
 .card_img{
   width: 320;
   height: 350;
   object-fit: contain;
+}
+.category_item p {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 23.4px */
+  letter-spacing: 0.54px;
+  
+}
+.category_item_link{
+  text-decoration: none;
 }

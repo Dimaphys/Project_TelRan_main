@@ -5,6 +5,7 @@ import CategoryPage from '../../pages/CategoriesPage';
 import MainPage from '../../pages/MainPage';
 import NotFoundPage from '../../pages/NotFoundPage';
 import ProductDescriptionPage from '../../pages/ProductDescriptionPage';
+import ProductsByCategoryPage from '../../pages/ProductsByCategoryPage';
 import Layout from '../Layout';
 import Container from '../UI/Container';
 import './App.css';
@@ -28,6 +29,7 @@ function App() {
             <Route path='/sales' element={<AllSalesPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/*' element={<NotFoundPage />} /> 
+            <Route path='/categories/:category' element={<ProductsByCategoryPage />} />
           </Route>
         </Routes> 
       

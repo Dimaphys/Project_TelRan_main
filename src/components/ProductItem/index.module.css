@@ -3,6 +3,7 @@
   border: 2px solid grey;
   height: 450px;
   box-shadow: 2px 2px 2px grey;
+  position: relative;
 }
 .link{
   text-decoration: none;
@@ -16,7 +17,11 @@
 }
 
 .add_btn {
-  background-color: green;
+  width: 279px;
+  height: 72px;
+  background-color: #F1FFF1;
+  border-radius: 21px;
+  border: 2px solid #393;
   color: white;
   padding: 10px;
   display: flex;
@@ -24,6 +29,16 @@
   align-items: center;
   cursor: pointer;
   visibility: hidden;
+  color: #393;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 23.4px */
+  position: absolute;
+  top:230px;
+  left: 20px;
+ 
 }
 
 .card:hover .add_btn {

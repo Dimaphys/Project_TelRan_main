@@ -1,27 +1,28 @@
-import React, { useEffect } from 'react'
-import { getCategories } from '../../async_actions/categories_req'
-import { useDispatch, useSelector } from 'react-redux'
-import CategoryItem from '../CategoryItem';
-import s from './index.module.css'
-import Container from '../UI/Container';
+import React, { useEffect } from "react";
+import { getCategories } from "../../async_actions/categories_req";
+import { useDispatch, useSelector } from "react-redux";
+import CategoryItem from "../CategoryItem";
+import s from "./index.module.css";
+import Container from "../UI/Container";
 
 export default function CategoriesContainer() {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCategories)
+    dispatch(getCategories);
   }, []);
 
-  const categories_state = useSelector(state => state.categories);
+  const categories_state = useSelector((state) => state.categories);
 
   return (
     <Container>
-    <div className={s.container}>
-      {
-        categories_state.map((el, index) => <CategoryItem key={index} category={el} />)
-      }
-    </div>
+      <div className={s.container}>
+        <div className={s.categories_container}>
+          {categories_state.map((el, index) => (
+            <CategoryItem key={index} category={el} />
+          ))}
+        </div>
+      </div>
     </Container>
-  )
+  );
 }
