@@ -1,8 +1,6 @@
 .category_item {
   border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 300px;
 }
 
 .category_item a {
@@ -12,4 +10,9 @@
   height: 100%;
   padding: 15px;
   text-align: center;
+}
+.card_img{
+  width: 320;
+  height: 350;
+  object-fit: contain;
 }

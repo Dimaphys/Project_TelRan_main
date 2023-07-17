@@ -1,17 +1,13 @@
-.form_container{
+
+.inputs_container{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 15px;
+   align-items: center;
+   justify-content: center;
+   gap:50px;
+  
   }
   
-  .price_filter_container{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center;
-  }
+
   .price_filter_container input{
     width: 103px;
     height: 42px;
@@ -36,4 +32,9 @@
     font-weight: 600;
     line-height: 130%; /* 26px */
     letter-spacing: 0.6px;
+  }
+  .form_container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
   }

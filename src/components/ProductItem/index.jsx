@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import s from './index.module.css'
 import { Link } from 'react-router-dom';
 import { addToCartAction } from '../../store/reducers/cartReducer';
-
+import Host from '../../common/Host';
 
 export const ProductItem = ({ id, title, description, price, discont_price, image }) => {
 
@@ -13,17 +13,19 @@ export const ProductItem = ({ id, title, description, price, discont_price, imag
   //   dispatch(deleteProduct(id));
   //   e.stopPropagation()
   // }
-  const host_link = "http://localhost:3333"
+
   const add_to_cart = () => dispatch(addToCartAction({ id, title, price, image }));
 
-  const img_link = [host_link,image].join("");
-  const product_route = `/product/${id}`;
+  const img_link = [Host(),image].join("");
+
+  const product_route = `/products/${id}`;
+
   const discont_value = Math.round((price - discont_price) / price * 100);
   return (
     <div>
         
         <div className={s.card}>
-              
+             <Link className={s.link} to={product_route}>
               <img src={img_link} alt={title} className={s.card_img}/>
               <p></p> 
                 <div className={s.price_container}>
@@ -41,6 +43,7 @@ export const ProductItem = ({ id, title, description, price, discont_price, imag
                   </p>
                 </div>
               <p className={s.products_title}>{title}</p>
+              </Link>
 {/* добавить stop propagation */}
       <button></button>
         </div>

@@ -1,9 +1,9 @@
 import { loadProducts } from "../store/reducers/productReducer";
 import { loadSingleProduct } from "../store/reducers/singleProductReducer";
 import { loadProductsByCategory } from "../store/reducers/productsByCategoryReducer";
-
+import Host from "../common/Host";
 export const getProducts = (dispatch) => {
-  fetch('http://localhost:3333/products/all')
+  fetch([Host(),'/products/all'].join(""))
     .then((res) => res.json())
     .then((json) => {
       const new_json = json.map(el => ({
@@ -16,16 +16,18 @@ export const getProducts = (dispatch) => {
 
 export const getSingleProduct = (id) => {
   return dispatch => {
-    fetch(`http://localhost:3333/products/${id}`)
+    fetch([Host(),`/products/${id}`].join(""))
       .then(res => res.json())
       .then(json => dispatch(loadSingleProduct(json)))
+      
   }
 }
 
 export const getProductsByCategory = (category) => {
   return dispatch => {
-    fetch(`http://localhost:3333/categories/${category}`)
+    fetch([Host(),`/categories/${category}`].join(""))
       .then(res => res.json())
       .then(json => dispatch(loadProductsByCategory(json.products)))
   }
 }
+// 

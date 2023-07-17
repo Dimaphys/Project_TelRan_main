@@ -27,32 +27,32 @@ export default function PriceFilter(){
   }
 
   return (
-    <div className={s.form_container}>
+    
       <label className={s.form_container}>
            <span>Price</span>
             <form className={s.price_filter_container}>
-            <div className={s.inputs_container}>
-              <input
-                name = "min"
-                type="number"
-                placeholder="from"
-                onChange={filter_price}
+              <div className={s.inputs_container}>
+                <input
+                  name = "min"
+                  type="number"
+                  placeholder="from"
+                  onChange={filter_price}
+                  
+                />
+                <input
+                  name = "max"
+                  type="number"
+                  placeholder="to"
+                  onChange={filter_price}
+                />
                 
-              />
-              <input
-                name = "max"
-                type="number"
-                placeholder="to"
-                onChange={filter_price}
-              />
-              
-                <p>Discounted items</p>
-                <input type='checkbox' name="discont" checked={checked} onClick={handleChange} onChange={filter_price}/> 
-              </div>
+                  <p>Discounted items</p>
+                  <input type='checkbox' name="discont" checked={checked} onClick={handleChange} onChange={filter_price}/> 
+                </div>
           </form>
         
       </label>
-    </div>
+    
   );
 
   }

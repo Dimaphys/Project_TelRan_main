@@ -1,20 +1,16 @@
 import React from 'react'
-import { getDiscountProductsAction, sortProductAction } from "../../store/reducers/productReducer";
+import { sortProductAction } from "../../store/reducers/productReducer";
 import s from "./style.module.css"
 import { useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
 import PriceFilter from '../PriceFilter';
 
 
 
 export default function FilterForm({onPriceChange}) {
-  // const [ checked, setChecked] = useState(false);
+
 
   const dispatch = useDispatch();
 
-  // const handleChange = () => setChecked(!checked);
-
-  // const handleClick = e => dispatch(getDiscountProductsAction(e.target.checked))
 
   const sort = event => dispatch(sortProductAction(event.target.value))
 

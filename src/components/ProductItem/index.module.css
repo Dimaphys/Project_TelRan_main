@@ -3,8 +3,12 @@
   border: 2px solid grey;
   height: 450px;
   box-shadow: 2px 2px 2px grey;
-
 }
+.link{
+  text-decoration: none;
+}
+
+
 .card_img{
   height: 300px;
   width: 300px;

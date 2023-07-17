@@ -11,7 +11,6 @@ export default function Layout() {
       <NavMenu />
       <Outlet />
       <Footer />
-      
     </div>
   );
 }
