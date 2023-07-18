@@ -1,19 +1,18 @@
 .cart_item {
   width: 824px;
-  border-top: 1px solid #A7A7A7;
-  border-bottom: 1px solid #A7A7A7;
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative; 
-  margin: -3px -3px 0 0;
   float: left;
 }
-.wrapper{
-  padding: 3px 0 0 3px;
+.wrapper >  div{
+  border-bottom: 1px solid #A7A7A7;
 }
-
+.wrapper >  div:first-child{
+    border-top: 1px solid #A7A7A7; 
+}
 .cart_item img {
   width: 192px;
   height: 167px;
@@ -50,7 +49,7 @@
   align-items: center;
   border-radius: 12px;
   border: 1px solid #000;
-  z-index: 2;
+
 }
 .count_box p{
   color: #000;
@@ -60,16 +59,16 @@
   font-weight: 600;
   line-height: 130%; /* 23.4px */
   letter-spacing: 0.54px;
-  z-index: 4;
+
 }
 
 .count_box button {
   padding: 10px 15px;
   cursor: pointer;
   border: none;
-  background-color: white;
+  background-color: transparent;
   font-size: 18px;
-  z-index: 4;
+
 
 }
 .final_price{

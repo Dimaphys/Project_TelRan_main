@@ -32,10 +32,16 @@ export default function Home() {
           <img src={home_sales_flowers}></img>
         </div>
       </div>
-      <h2 className={s.catalog}>Catalog</h2>
-      <Link to="/categories">
-      <button>All categories</button>
-      </Link>
+      <div className={s.catalog_categories}>
+        <div>
+          <h2 className={s.catalog}>Catalog</h2>
+         </div> 
+         <div>
+            <Link to="/categories">
+              <button>All categories</button>
+            </Link>
+          </div>
+      </div>
       <div className={s.container}>
         
         <div className={s.categories_container}>
@@ -44,7 +50,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className={s.home_catalod_container}></div>
+      <div className={s.home_catalod_container}>Hello</div>
     </Container>
   );
 }

@@ -6,8 +6,9 @@ import FilterForm from '../FilterForm';
 
 
 
-export const CategoryContainer = ({products_state}) => {
+export const ProductsWithSaleContainer = ({products_state}) => {
 
+console.log(products_state)
 
 
   return (
