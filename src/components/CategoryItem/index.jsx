@@ -5,9 +5,9 @@ import Host from '../../common/Host';
 
 
 export default function CategoryItem({ category}) {
-
     const category_route = `/categories/${category.id}`
     const img_link = [Host(),category.image].join("");
+
   return (
       <div className={s.category_item}>
         <Link className={s.category_item_link} to={category_route}>

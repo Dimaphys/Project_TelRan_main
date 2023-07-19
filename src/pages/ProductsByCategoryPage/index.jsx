@@ -11,13 +11,16 @@ export default function ProductsByCategoryPage() {
 
   const { category } = useParams();
 
+  
   useEffect(() => dispatch(getProductsByCategory(category)), []);
 
-  const products_state = useSelector(state => state.productsByCategory);
 
+  const products_state = useSelector(store => store.productsByCategory);
+  console.log(products_state)
   return (
     <div>
-      <CategoryContainer products_state={products_state} />
+
+      <CategoryContainer products_state={products_state} category={category}/>
     </div>
   )
 }

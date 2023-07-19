@@ -1,0 +1,15 @@
+.categories_title{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.2px;
+    padding-left: 10px;
+   
+}
+.categories_container{
+   padding-top: 60px;
+   
+}

@@ -1,0 +1,41 @@
+.coupon_form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+}
+.coupon_form input{
+    width: 473px;
+    height: 75.441px;
+    border-radius: 25.147px;
+    background-color: #FFF;
+    border: none;
+    color: #6C6C6C;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: 0.54px;
+    padding-left: 50px;
+}
+.coupon_form button{
+    background-color: transparent;
+    width: 473px;
+    height: 75.441px;
+    border-radius: 25.147px;
+    border: 2.395px solid #FFF;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 28.739px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 34.487px */
+    letter-spacing: 0.862px;
+    cursor: pointer;
+}
+.error_modal{
+    position: absolute;
+}

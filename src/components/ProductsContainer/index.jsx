@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ProductItem } from '../ProductItem'; 
-import s from './index.module.css'
+import s from './style.module.css'
 import Container from '../UI/Container';
 import FilterForm from '../FilterForm';
 
@@ -8,8 +8,7 @@ import FilterForm from '../FilterForm';
 
 export const ProductsContainer = ({products_state}) => {
 
-
-
+  
 
   return (
     <Container className={s.container}>

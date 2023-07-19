@@ -1,4 +1,30 @@
-s.filters_container{
+.filters_container{
     display: flex;
-    
+    align-items: center;
+    gap:100px;
+    padding-bottom: 42px;
+
+  }
+  .sorting span{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    letter-spacing: 0.6px;
+    margin-right: 52px;
+  }
+
+  .sorting select{ 
+    width: 220px;
+    height: 40px;
+    border-radius: 7px;
+    color: #797979;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: 0.48px;
   }

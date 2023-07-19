@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { filterProductsByPriceAction, getDiscountProductsAction } from '../../store/reducers/productReducer';
+import { filterProductsByPriceAction} from '../../store/reducers/productReducer';
 import s from "./style.module.css"
 
 export default function PriceFilter(){
@@ -18,7 +18,7 @@ export default function PriceFilter(){
   const filter_price = e => {
     
   
-    const { min, max, discont} = e.target.parentElement.parentElement;
+    const { min, max, discont} = e.target.form;
     
     const discount = discont.checked
     const min_value = min.value || 0;

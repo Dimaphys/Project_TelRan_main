@@ -5,6 +5,7 @@ import { clearCartAction } from "../../store/reducers/cartReducer";
 import Container from "../UI/Container";
 import s from "./style.module.css";
 import { Link } from "react-router-dom";
+import PostOrderForm from "../PostOrderForm";
 
 export default function CartContainer() {
   const dispatch = useDispatch();
@@ -47,9 +48,11 @@ export default function CartContainer() {
             <p className={s.total_title}>Total: </p>
             <p className={s.total_price}>{total} $</p>
           </div>
-          <button onClick={() => dispatch(clearCartAction())}>
+          <PostOrderForm/>
+          {/* Можно добавить кнопку для очистки корзины она ниже */}
+          {/* <button onClick={() => dispatch(clearCartAction())}>
             Clear cart
-          </button>
+          </button> */}
         </div>
       </div>
     </Container>

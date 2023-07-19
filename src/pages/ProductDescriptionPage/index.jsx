@@ -7,6 +7,7 @@ import s from "./style.module.css";
 import { Link } from "react-router-dom";
 import Host from "../../common/Host";
 import Container from "../../components/UI/Container";
+import { DiscontValue } from "../../common/FinalPrice";
 
 export default function ProductDescriptionPage() {
   const dispatch = useDispatch();
@@ -15,10 +16,9 @@ export default function ProductDescriptionPage() {
   const product_state = useSelector((state) => state.singleProduct);
 
 
-  const { title, description, price, image, category,discont_price} = product_state;
+  const { title, description, price, image, discont_price} = product_state;
 
-  const discont_value = Math.round(((price - discont_price) / price) * 100);
-
+  const discont_value = DiscontValue(price, discont_price);
   const img_link = [Host(), image].join("");
   const add_to_cart = () =>
     dispatch(addToCartAction({ id: +id, title, price, image }));

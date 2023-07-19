@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 import Host from "../../common/Host";
 import { loadSingleProduct } from "../../store/reducers/singleProductReducer";
+import {DiscontValue} from "../../common/FinalPrice";
 
 export const ProductItem = ({
   id,
@@ -24,7 +25,7 @@ export const ProductItem = ({
 
   const product_route = `/products/${id}`;
 
-  const discont_value = Math.round(((price - discont_price) / price) * 100);
+  const discont_value = DiscontValue(price, discont_price);
   return (
     <div>
       <div className={s.card}>
@@ -45,8 +46,6 @@ export const ProductItem = ({
         <div className={s.add_btn} onClick={add_to_cart}>
           Add to cart
         </div>
-        {/* добавить stop propagation */}
-        <button></button>
       </div>
     </div>
   );

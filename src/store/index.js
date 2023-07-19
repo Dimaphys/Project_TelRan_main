@@ -5,13 +5,16 @@ import { cartReducer } from './reducers/cartReducer';
 import { categoryReducer } from './reducers/categoryReducer';
 import { productsByCategoryReducer } from './reducers/productsByCategoryReducer';
 import thunk from 'redux-thunk'
+import postReqReducer from './reducers/postReqReducer';
 
 const rootReducer = combineReducers({
   products: productsReducer,
   singleProduct: singleProductReducer,
   cart: cartReducer,
   categories: categoryReducer,
-  productsByCategory: productsByCategoryReducer
+  productsByCategory: productsByCategoryReducer,
+  couponRequest: postReqReducer,
+  order: postReqReducer,
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));

@@ -30,7 +30,14 @@ export const getProductsByCategory = (id) => {
   return dispatch => {
     fetch([Host(),`/categories/${id}`].join(""))
       .then(res => res.json())
-      .then(json => dispatch(loadProductsByCategory(json.data)))
-  }
-}
+      .then((json)  => {
+        const new_json = json.data.map(el=>({
+          ...el,
+          show_item:true
+        }));
+        dispatch(loadProductsByCategory(new_json))})
+      }
+}  
+  
+
 // 

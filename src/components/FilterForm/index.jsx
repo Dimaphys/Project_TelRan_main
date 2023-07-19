@@ -6,7 +6,7 @@ import PriceFilter from '../PriceFilter';
 
 
 
-export default function FilterForm({onPriceChange}) {
+export default function FilterForm() {
 
 
   const dispatch = useDispatch();
@@ -17,16 +17,16 @@ export default function FilterForm({onPriceChange}) {
   return (
   <div className={s.filters_container}>
     <div>
-    <PriceFilter onPriceChange={onPriceChange}/>
+    <PriceFilter/>
     </div>
    
-   <div>
+   <div className={s.sorting}>
         <label>
-          <span>Sort:</span>
+          <span>Sorted</span>
             <select onInput={sort} defaultValue={{value:"default"}}>
-              <option value="default" hidden>---</option>
+              <option value="default" hidden>by default</option>
               <option value="title">By titile</option>
-              <option value="price_asc">By price ASC</option>
+              <option value="price_asc">By price ASC</option> 
               <option value="price_desc">By price DESC</option>
             </select>
         </label>
