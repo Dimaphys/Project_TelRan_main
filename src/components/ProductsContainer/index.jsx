@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
-import { ProductItem } from '../ProductItem'; 
+import React from 'react';
+
 import s from './style.module.css'
 import Container from '../UI/Container';
 import FilterForm from '../FilterForm';
+import { ProductItem } from '../ProductItem';
 
 
 
 export const ProductsContainer = ({products_state}) => {
-
   
-
   return (
     <Container className={s.container}>
     <div>

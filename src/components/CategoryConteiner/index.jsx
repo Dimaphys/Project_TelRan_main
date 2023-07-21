@@ -1,38 +1,28 @@
-import React, { useEffect } from 'react';
-import { ProductItem } from '../ProductItem'; 
+import React from 'react';
+import { ProductByCategoryItem } from '../ProductsByCategoryItem'; 
 import s from './style.module.css'
 import Container from '../UI/Container';
 import FilterForm from '../FilterForm';
-import { getCategories } from '../../async_actions/categories_req';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 
 
 
 
-export const CategoryContainer = ({products_state, category}) =>{
-  const dispatch = useDispatch();
 
-  console.log(category);
-  useEffect(() => {
-    dispatch(getCategories);
-  }, []);
-  
+export const CategoryContainer = ({products_by_category_state,  title_by_category_state}) =>{
  
-  const categories_state = useSelector((state) => state.categories);
-  console.log(categories_state)
+ 
 
   return (
     <Container className={s.container}>
     <div>
-    <h2>{categories_state[category-1].title}</h2>
+    <h2>{title_by_category_state}</h2>
       <div>
        <FilterForm/>
       <div className={s.products_container}>
-        {products_state
+        {products_by_category_state
         .filter(el => el.show_item)
         .map((item) => (
-          <ProductItem key={item.id} {...item} />
+          <ProductByCategoryItem key={item.id} {...item} />
         ))}
       </div>
     </div>

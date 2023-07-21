@@ -2,11 +2,11 @@ import React from 'react'
 import { sortProductAction } from "../../store/reducers/productReducer";
 import s from "./style.module.css"
 import { useDispatch } from 'react-redux';
-import PriceFilter from '../PriceFilter';
+import PriceFilterDiscount from '../PriceFilterDiscount';
 
 
 
-export default function  FilterForm() {
+export default function  FilterFormDiscount() {
 
 
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export default function  FilterForm() {
   return (
   <div className={s.filters_container}>
     <div>
-    <PriceFilter/>
+    <PriceFilterDiscount/>
     </div>
    
    <div className={s.sorting}>

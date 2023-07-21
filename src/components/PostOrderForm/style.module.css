@@ -21,6 +21,7 @@
     letter-spacing: 0.54px;
     padding-left: 50px;
     margin-top: 50px;
+    margin-left: -20px;
 }
 .order_form button{
      display: flex;
@@ -40,4 +41,5 @@
     line-height: 120%; /* 34.487px */
     letter-spacing: 0.862px;
     cursor: pointer;
+    margin-left: -20px;
 }

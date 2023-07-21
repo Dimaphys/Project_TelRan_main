@@ -1,6 +1,6 @@
 import { loadProducts } from "../store/reducers/productReducer";
 import { loadSingleProduct } from "../store/reducers/singleProductReducer";
-import { loadProductsByCategory } from "../store/reducers/productsByCategoryReducer";
+import { loadProductsByCategory, loadTitleByCategory } from "../store/reducers/productsByCategoryReducer";
 import Host from "../common/Host";
 
 
@@ -38,6 +38,16 @@ export const getProductsByCategory = (id) => {
         dispatch(loadProductsByCategory(new_json))})
       }
 }  
+
+export const getTitleByCategory = (id) => {
+  return dispatch => {
+    fetch([Host(),`/categories/${id}`].join(""))
+      .then(res => res.json())
+      .then((json)  => {
+        const new_json = json.category.title;
+        dispatch(loadTitleByCategory(new_json))})
+      }
+} 
   
 
 // 

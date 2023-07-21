@@ -1,0 +1,40 @@
+
+.inputs_container{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   gap:50px;
+  
+  }
+  
+
+  .price_filter_container input{
+    width: 103px;
+    height: 42px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    padding: 10px;
+    color: #ACACAC;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: 0.48px;
+    
+  }
+
+  .form_container span{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    letter-spacing: 0.6px;
+  }
+  .form_container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }

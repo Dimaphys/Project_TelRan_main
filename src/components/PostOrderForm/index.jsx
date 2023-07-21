@@ -6,8 +6,9 @@ import s from "./style.module.css"
 const PostOrderForm = () => {
   const [orderData, setOrderData] = useState({});
   const dispatch = useDispatch();
-  const order = useSelector((state) => state.order.orderData);
-  const error = useSelector((state) => state.order.error);
+  const cart = useSelector((state) => state.cart); 
+  
+
 
   const handleChange = (e) => {
     setOrderData({ ...orderData, [e.target.name]: e.target.value });
@@ -15,6 +16,14 @@ const PostOrderForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (Object.keys(orderData).length === 0) {
+      console.log('Проверьте данные');
+      return;
+    }else if(cart.length === 0) 
+    {
+      console.log('Корзина пуста. Запрос не отправлен.');
+      return;
+    }
     dispatch(sendOrder(orderData));
   };
 

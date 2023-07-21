@@ -7,7 +7,7 @@ import Host from "../../common/Host";
 import { loadSingleProduct } from "../../store/reducers/singleProductReducer";
 import {DiscontValue} from "../../common/FinalPrice";
 
-export const ProductItem = ({
+export const ProductByCategoryItem = ({
   id,
   title,
   price,
@@ -16,7 +16,6 @@ export const ProductItem = ({
 }) => {
   const dispatch = useDispatch();
  
-
   const add_to_cart = () =>
     dispatch(addToCartAction({ id, title, price, image, discont_price, discont_value }));
 

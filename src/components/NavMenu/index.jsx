@@ -12,10 +12,13 @@ export default function NavMenu() {
     <header className={s.header}>
       <nav className={s.nav}>
         <Container className={s.container}>
+        
           <div className={s.logo}>
-            <div>
-              <img src={logo} alt="Logo" />
-            </div>
+            <Link to="/">
+              <div>
+                <img src={logo} alt="Logo" />
+              </div>
+            </Link>
             <Link to="/categories">
             <div className={s.catalog}>Catalog</div>
             </Link>

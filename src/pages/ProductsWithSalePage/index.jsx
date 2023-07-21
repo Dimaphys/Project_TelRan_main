@@ -5,16 +5,16 @@ import { getProducts } from '../../async_actions/products_req';
 
 
 export default function ProductsWithSalePage() {
-  const products_state = useSelector((store) => store.products);
+ 
 
     const dispatch = useDispatch();
   
     useEffect(() => {
-      dispatch(getProducts)
+      dispatch(getProducts)}, []);
+      const products_state = useSelector((store) => store.products);
 
-
-    }, []); return (
+     return (
    
-    <div><ProductsWithSaleContainer/></div>
+    <div><ProductsWithSaleContainer products_state={products_state.filter((el) => el.discont_price)}/></div>
   )
 }

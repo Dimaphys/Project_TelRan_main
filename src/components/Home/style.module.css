@@ -151,4 +151,8 @@
     font-weight: 700;
     line-height: 130%; /* 52px */
     letter-spacing: 1.2px;
+    padding-left: 30px;
+  }
+  .sales_link{
+    text-decoration: none;
   }

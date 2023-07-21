@@ -9,6 +9,7 @@ import { getCategories } from "../../async_actions/categories_req";
 import CategoryItem from "../CategoryItem";
 import gnome from "../../media/Gnome.png"
 import CouponForm from "../CouponForm";
+import ThreeRandomProducts from "../ThreeRandomProduct";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export default function Home() {
         <div>
           <h2>Sale</h2>
           <h3>New season</h3>
-          <Link to="/categories">
+          <Link className={s.sales_link} to="/sales">
             <div className={s.sale_button}>
               <p>Sale</p>
             </div>
@@ -65,6 +66,7 @@ export default function Home() {
         </div>
       </div>
       <h2 className={s.sale_title}>Sale</h2>
+      <ThreeRandomProducts/>
     </Container>
   );
 }
