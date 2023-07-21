@@ -6,6 +6,7 @@ import s from "./style.module.css"
 export default function PriceFilter(){
 
   const [ checked, setChecked] = useState(false);
+  
 
   const dispatch = useDispatch();
 
@@ -37,6 +38,7 @@ export default function PriceFilter(){
                   type="number"
                   placeholder="from"
                   onChange={filter_price}
+                  min="0"
                   
                 />
                 <input
@@ -44,6 +46,7 @@ export default function PriceFilter(){
                   type="number"
                   placeholder="to"
                   onChange={filter_price}
+                  min="0"
                 />
                 
                   <p>Discounted items</p>
