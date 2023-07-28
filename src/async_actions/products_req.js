@@ -4,6 +4,8 @@ import { loadProductsByCategory, loadTitleByCategory } from "../store/reducers/p
 import Host from "../common/Host";
 
 
+// Получение всех продуктов и присвоением им свойства show_item
+
 export const getProducts = (dispatch) => {
   fetch([Host(),'/products/all'].join(""))
     .then((res) => res.json())
@@ -16,6 +18,8 @@ export const getProducts = (dispatch) => {
   
 }
 
+//Получение одного продукта
+
 export const getSingleProduct = (id) => {
   return dispatch => {
     fetch([Host(),`/products/${id}`].join(""))
@@ -25,6 +29,7 @@ export const getSingleProduct = (id) => {
   }
 }
 
+//Получение всех продуктов по категории
 
 export const getProductsByCategory = (id) => {
   return dispatch => {
@@ -38,6 +43,8 @@ export const getProductsByCategory = (id) => {
         dispatch(loadProductsByCategory(new_json))})
       }
 }  
+
+//Получение чистого id категории
 
 export const getTitleByCategory = (id) => {
   return dispatch => {

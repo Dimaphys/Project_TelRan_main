@@ -18,7 +18,6 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   
   return (
-    <Container>
       <div>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -34,7 +33,7 @@ function App() {
         </Routes> 
       
       </div>
-    </Container>
+
   );
 }
 
